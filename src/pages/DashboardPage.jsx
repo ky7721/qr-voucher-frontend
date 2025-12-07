@@ -1,7 +1,7 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
-const backendURL = "https://qr-voucher-backend.onrender.com"; // Render backend URL
+const backendURL = "https://qr-voucher-backend.onrender.com";
 
 export default function DashboardPage() {
   const [stats, setStats] = useState(null);
@@ -12,7 +12,7 @@ export default function DashboardPage() {
       .catch((err) => console.error(err));
   }, []);
 
-  if (!stats) return <p>Loading...</p>;
+  if (!stats) return <p className="text-center">Loading...</p>;
 
   return (
     <div className="p-10 text-center">

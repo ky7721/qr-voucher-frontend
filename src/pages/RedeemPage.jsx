@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const backendURL = "https://qr-voucher-backend.onrender.com"; // Render backend URL
+const backendURL = "https://qr-voucher-backend.onrender.com";
 
 export default function RedeemPage() {
   const { code } = useParams();
@@ -14,7 +14,7 @@ export default function RedeemPage() {
       .catch((err) => console.error(err));
   }, [code]);
 
-  if (!result) return <p>Loading...</p>;
+  if (!result) return <p className="text-center">Loading...</p>;
 
   return (
     <div className="p-10 text-center">
